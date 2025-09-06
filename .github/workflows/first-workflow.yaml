@@ -21,6 +21,6 @@ jobs:
     needs: run-sh-cmd
     steps:
       - name: check date
-        run: Date /t
+        run: Date
       - name: error command
         run: thisis error
