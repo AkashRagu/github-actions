@@ -10,4 +10,17 @@ jobs:
       - name: run parallel jobs
         run: |
           node -v
-          npm -v
+          npm -vS
+  run-parallel-job:
+    runs-on: macos-latest
+    steps:
+      - name: check sw version
+        run: sw_vers
+  run-dependant-job:
+    runs-on: windows-latest
+    needs: run-sh-cmd
+    steps:
+      - name: check date
+        run: Date /t
+      - name: error command
+        run: thisis error
