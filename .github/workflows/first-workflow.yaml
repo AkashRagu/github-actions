@@ -22,5 +22,3 @@ jobs:
     steps:
       - name: check date
         run: Date
-      - name: error command
-        run: thisis error
