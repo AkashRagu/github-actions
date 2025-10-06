@@ -11,4 +11,16 @@ jobs:
               run: |
                 npm -v
                 node -v
+    mac-os-job:
+      runs-on: mac-os
+      steps:
+        - name: check os version
+          run: sw_vers
+    parallel-job:
+        runs-on: windows
+        needs: run-shell-commands
+        steps:
+          - name: run batch operation
+            run: date
+
 
