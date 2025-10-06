@@ -14,3 +14,14 @@ jobs:
               run: echo "::warning title:warning title,file=app.js,line=3,endLine=4,col=5,endColumn=7::Missing semicolon"
             - name: notice title and file
               run: echo "::notice title:notice title,file=app.js,line=3,endLine=4,col=5,endColumn=7::Missing semicolon"
+            - name: group logs
+              run: |
+                echo "::group::Names"
+                echo "akash"
+                echo "walter"
+                echo "ben"
+                echo "::endgroup"
+            - name: mash-job
+              run: echo "::add-mask::secretword"
+            - name: echo the secret
+              run: echo "secretword"       
