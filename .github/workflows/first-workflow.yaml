@@ -12,12 +12,12 @@ jobs:
                 npm -v
                 node -v
     mac-os-job:
-      runs-on: mac-os
+      runs-on: macos-latest
       steps:
         - name: check os version
           run: sw_vers
     parallel-job:
-        runs-on: windows
+        runs-on: windows-latest
         needs: run-shell-commands
         steps:
           - name: run batch operation
