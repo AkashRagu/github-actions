@@ -10,5 +10,5 @@ jobs:
             - name: multiline command
               run: |
                 npm -v
-                ndoe -v
+                node -v
 
